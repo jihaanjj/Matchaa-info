@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Boldonse','Roboto', sans-serif;
+}
+
+h2 {
+  font-family: 'Lora','Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat','Roboto', sans-serif;
+}
+
+h1, h2 {
+  color: #3F7D58;
+}
+
+.jumbotron {
+  background-color: #E4EFE7;
+  padding: 40px;
+  text-align: center;
+}
+
+nav ul {
+  display:flex;
+  justify-content: center;
+}
+ 
+nav li {
+  list-style-type: none;
+}
+nav li a {
+  text-decoration: none;
+  color: #015551;
+  padding: 20px;
+}
+nav li a:hover {
+  background-color: #FDFAF6;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+nav {
+  background-color: #EDE8DC;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  padding: 20px;
+  overflow: visible;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.img-content{
+  width: 300px; 
+}
+ 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.profile-image{
+  text-align: center;
+}
+
+.profile img{
+  max-width: 200px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.profile-info{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+aside {
+  flex: 1;
+}
+
+footer{
+  background-color: #EDE8DC;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+header {
+  display: inline;
+}
+
+.jumbotron {
+    background-color: #E4EFE7;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.slide {
+    font-size: 2rem;
+    color: #3F7D58;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+    animation: slideIn 10s infinite;
+}
+
+/* Animasi slide dari atas ke bawah */
+@keyframes slideIn {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    25% {
+        top: 0;
+        opacity: 1;
+    }
+    75% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -100%;
+        opacity: 0;
+    }
+}
+
+/* Delay untuk setiap teks */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide:nth-child(2) {
+    animation-delay: 3.33s;
+}
+.slide:nth-child(3) {
+    animation-delay: 6.66s;
+}
+
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
+
+
